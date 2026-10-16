@@ -1,0 +1,29 @@
+<svg viewBox="0 0 760 470" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" font-size="13">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#444"/></marker></defs>
+<rect width="760" height="470" fill="#fff"/>
+<text x="380" y="28" text-anchor="middle" font-size="18" font-weight="bold">Agentic AI Agent - Architecture Schema</text>
+<rect x="290" y="50" width="180" height="46" rx="8" fill="#e8f0fe" stroke="#4a6fa5"/><text x="380" y="78" text-anchor="middle">User Goal (CLI)</text>
+<rect x="250" y="130" width="260" height="190" rx="10" fill="#fff4e0" stroke="#d08a1c" stroke-width="2"/>
+<text x="380" y="152" text-anchor="middle" font-weight="bold">Agent Controller (agent.py)</text>
+<rect x="270" y="165" width="100" height="36" rx="6" fill="#fff" stroke="#d08a1c"/><text x="320" y="188" text-anchor="middle">1. PLAN</text>
+<rect x="390" y="165" width="100" height="36" rx="6" fill="#fff" stroke="#d08a1c"/><text x="440" y="188" text-anchor="middle">2. ACT</text>
+<rect x="390" y="255" width="100" height="36" rx="6" fill="#fff" stroke="#d08a1c"/><text x="440" y="278" text-anchor="middle">3. OBSERVE</text>
+<rect x="270" y="255" width="100" height="36" rx="6" fill="#fff" stroke="#d08a1c"/><text x="320" y="278" text-anchor="middle">4. REFLECT</text>
+<path d="M370 183H388" stroke="#444" marker-end="url(#a)"/><path d="M440 201V253" stroke="#444" marker-end="url(#a)"/><path d="M388 273H372" stroke="#444" marker-end="url(#a)"/><path d="M320 253V203" stroke="#444" marker-end="url(#a)"/>
+<text x="380" y="313" text-anchor="middle" font-size="11" fill="#666">loop until done or MAX_STEPS = 8</text>
+<path d="M380 96V128" stroke="#444" marker-end="url(#a)"/>
+<rect x="20" y="150" width="170" height="130" rx="10" fill="#f3e8ff" stroke="#7c4dbd"/>
+<text x="105" y="175" text-anchor="middle" font-weight="bold">LLM Brain</text><text x="105" y="198" text-anchor="middle">Claude (Anthropic API)</text><text x="105" y="218" text-anchor="middle">reasoning + tool-use</text><text x="105" y="238" text-anchor="middle">decides next action</text>
+<path d="M248 215H192" stroke="#444" marker-end="url(#a)"/><path d="M192 235H248" stroke="#444" marker-end="url(#a)"/>
+<rect x="570" y="130" width="170" height="190" rx="10" fill="#e6f7ee" stroke="#2e8b57"/>
+<text x="655" y="152" text-anchor="middle" font-weight="bold">Tools (tools.py)</text>
+<text x="655" y="180" text-anchor="middle">calculator</text><text x="655" y="205" text-anchor="middle">current_time</text><text x="655" y="230" text-anchor="middle">wikipedia_search</text><text x="655" y="255" text-anchor="middle">save_note</text><text x="655" y="280" text-anchor="middle">recall_notes</text>
+<path d="M512 225H568" stroke="#444" marker-end="url(#a)"/><path d="M568 245H512" stroke="#444" marker-end="url(#a)"/>
+<rect x="570" y="360" width="170" height="60" rx="8" fill="#fdecea" stroke="#c0392b"/><text x="655" y="385" text-anchor="middle">Long-term Memory</text><text x="655" y="405" text-anchor="middle" font-size="11">agent_memory.json</text>
+<path d="M655 322V358" stroke="#444" marker-end="url(#a)"/>
+<rect x="250" y="360" width="260" height="60" rx="8" fill="#eef" stroke="#4a6fa5"/><text x="380" y="385" text-anchor="middle">Short-term Memory</text><text x="380" y="405" text-anchor="middle" font-size="11">conversation history (messages list)</text>
+<path d="M380 322V358" stroke="#444" marker-end="url(#a)"/>
+<rect x="20" y="360" width="170" height="60" rx="8" fill="#e8f0fe" stroke="#4a6fa5"/><text x="105" y="395" text-anchor="middle">Final Answer</text>
+<path d="M248 300L192 372" stroke="#444" marker-end="url(#a)"/>
+<text x="380" y="448" text-anchor="middle" font-size="11" fill="#666">Data flow: Goal -> Plan -> Tool call -> Observation -> Reflection -> ... -> Final answer</text>
+</svg>
